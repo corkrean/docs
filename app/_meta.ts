@@ -23,7 +23,7 @@ export default {
     type: "page",
   },
   materialize: {
-    title: "Materialize",
+    title: "Managed Materialize",
     type: "page",
   },
   mcp: {
