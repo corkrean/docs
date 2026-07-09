@@ -50,6 +50,33 @@ export default withNextra({
         destination: "/spicedb/best-practices/:path*",
         permanent: true,
       },
+      // Materialize was promoted from a single concept page to a top-level
+      // section (PR #562). Keep the old indexed URL working.
+      {
+        source: "/authzed/concepts/authzed-materialize",
+        destination: "/materialize/getting-started/overview",
+        permanent: true,
+      },
+      // The Ops pages below moved on 2026-02-05 without redirects, leaving
+      // ~2 months of indexed URLs 404ing. ai-agent-authorization and
+      // secure-rag-pipelines moved into the new Tutorials section; the
+      // langchain/langgraph RAG page was folded into the langchain-spicedb
+      // integration page.
+      {
+        source: "/spicedb/ops/ai-agent-authorization",
+        destination: "/spicedb/tutorials/ai-agent-authorization",
+        permanent: true,
+      },
+      {
+        source: "/spicedb/ops/secure-rag-pipelines",
+        destination: "/spicedb/tutorials/secure-rag-pipelines",
+        permanent: true,
+      },
+      {
+        source: "/spicedb/ops/spicedb-langchain-langgraph-rag",
+        destination: "/spicedb/integrations/langchain-spicedb",
+        permanent: true,
+      },
     ];
   },
   // This is necessary because we're using CDN domains.
