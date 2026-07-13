@@ -13,7 +13,7 @@ Every piece of permission data Materialize hands you is anchored to the revision
 Snapshots are what make the two Materialize APIs compose safely:
 
 - [The initial backfill](./permission-set-lifecycle) reads a snapshot in full.
-- [WatchPermissionSets](../../api/watch-permission-sets) advances that snapshot forward, delivering the deltas that move it from one revision to the next.
+- [WatchPermissionSets](../api/watch-permission-sets) advances that snapshot forward, delivering the deltas that move it from one revision to the next.
 
 ## Why the revision matters
 

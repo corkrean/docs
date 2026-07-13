@@ -22,13 +22,13 @@ This is what makes authorization-aware search, sorting, and filtering over large
 
 Permission sets reach your application through two complementary APIs:
 
-- [LookupPermissionSets](../../api/lookup-permission-sets) — reads the **current** permission sets as an initial backfill. See [The permission set lifecycle](./permission-set-lifecycle).
-- [WatchPermissionSets](../../api/watch-permission-sets) — streams **changes** to permission sets as relationships and schema evolve. See [Snapshots](./snapshots) for how the two stay consistent.
+- [LookupPermissionSets](../api/lookup-permission-sets) — reads the **current** permission sets as an initial backfill. See [The permission set lifecycle](./permission-set-lifecycle).
+- [WatchPermissionSets](../api/watch-permission-sets) — streams **changes** to permission sets as relationships and schema evolve. See [Snapshots](./snapshots) for how the two stay consistent.
 
 ## Storing permission sets
 
 The shape of the data maps cleanly onto relational tables (a `member_to_set` and a `set_to_set` table is the most flexible model), or into a secondary index such as Elasticsearch for ACL-filtered search.
-See [Syncing to a Relational Database](../../guides/relational-database) for worked examples.
+See [Syncing to a Relational Database](../guides/relational-database) for worked examples.
 
 <Callout type="info">
   The fields returned by `LookupPermissionSets` and `WatchPermissionSets` are identical — you store
